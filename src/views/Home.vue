@@ -1,7 +1,7 @@
 <template>
   <div>
     <full-page ref="fullpage" :options="options" id="fullpage">
-      <div class="section">
+      <div class="section section01-container">
         <img lazyload class="section-bg" src="../assets/img/01.jpg" />
         <div class="section-01">
           <img
@@ -38,27 +38,17 @@
           <p class="subtitle">¡Está rodeado de áreas verdes!</p>
         </div>
       </div>
-      <div class="section">
+      <div class="section section03-container">
         <span class="bricsa-square"></span>
         <img lazyload class="section-bg" src="../assets/img/03.jpg" alt="" />
+        <img lazyload class="section-bg02" src="../assets/img/04.jpg" alt="" />
         <div class="section-03">
           <p class="title">
             Disfruta <br />
             tu terraza <br />y tu plaza
           </p>
           <p class="subtitle">Depto. con opción a terraza privada.</p>
-        </div>
-      </div>
-      <div class="section">
-        <span class="bricsa-square"></span>
-        <img lazyload class="section-bg" src="../assets/img/04.jpg" alt="" />
-        <div class="section-04">
-          <img lazyload class="disfruta" src="../assets/img/disfruta.png" />
-          <p class="title">
-            Disfruta <br />
-            tu terraza <br />y tu plaza
-          </p>
-          <p class="subtitle">
+          <p class="subtitle02">
             Frente a Plaza Zañartu y cercano a otros parques.
           </p>
         </div>
@@ -288,59 +278,99 @@ export default {
   z-index: -1;
   left: -100%;
 }
-.section-01 {
-  background: rgba($color: #000000, $alpha: 0.3);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  .section-logo {
-    width: 100px;
-    position: absolute;
-    top: 50px;
-    left: 20px;
+.section01-container {
+  .section-bg {
+    animation-name: section01-bg;
+    animation-duration: 3s;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    left: -100%;
   }
-  .call {
-    text-align: left;
-    width: 70%;
-    color: #fff;
-    font-size: 60px;
-    font-weight: bolder;
-    line-height: 0.8;
-    position: absolute;
-    bottom: 30%;
-    left: 20px;
+  @keyframes section01-bg {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
   }
-  .downgrade {
-    text-align: left;
-    width: 70%;
-    color: #fff;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 0.8;
+  .section-01 {
+    background: rgba($color: #000000, $alpha: 0.3);
+    width: 100%;
+    height: 100%;
     position: absolute;
-    bottom: 25%;
-    left: 20px;
-  }
-  .uptext {
-    transform: rotate(-90deg);
-    font-size: 230px;
-    position: absolute;
-    right: -250px;
-    bottom: 170px;
-    margin: 0;
-    font-weight: bolder;
-    color: #fff;
-  }
-  .arrow-down {
-    width: 100px;
-    position: absolute;
-    margin: 0 auto;
-    left: 150px;
-    bottom: 20px;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    .section-logo {
+      width: 100px;
+      position: absolute;
+      top: 50px;
+      left: 20px;
+    }
+    .call {
+      text-align: left;
+      width: 70%;
+      color: #fff;
+      font-size: 60px;
+      font-weight: bolder;
+      line-height: 0.8;
+      position: absolute;
+      bottom: 30%;
+      left: 20px;
+    }
+    .downgrade {
+      text-align: left;
+      width: 70%;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 0.8;
+      position: absolute;
+      bottom: 25%;
+      left: 20px;
+    }
+    .uptext {
+      animation-name: uptext;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+      transform: rotate(-90deg);
+      font-size: 230px;
+      position: absolute;
+      right: -250px;
+      margin: 0;
+      font-weight: bolder;
+      color: #fff;
+    }
+    @keyframes uptext {
+      0% {
+        top: 100%;
+      }
+      100% {
+        top: 20%;
+      }
+    }
+    .arrow-down {
+      animation-name: arrow-down;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      width: 100px;
+      position: absolute;
+      margin: 0 auto;
+      left: 150px;
+      bottom: 20px;
+    }
+    @keyframes arrow-down {
+      0% {
+        bottom: 25px;
+      }
+      100% {
+        bottom: 10px;
+      }
+    }
   }
 }
 .section-02 {
@@ -366,6 +396,9 @@ export default {
     line-height: 0.9;
   }
   .subtitle {
+    animation-name: section-02__subtitle;
+    animation-duration: 2s;
+    animation-fill-mode: both;
     position: absolute;
     color: #fff;
     width: 100%;
@@ -374,40 +407,90 @@ export default {
     bottom: 0;
     line-height: 1;
   }
-}
-.section-03 {
-  background: rgba($color: #000000, $alpha: 0.3);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  .title {
-    position: absolute;
-    color: #fff;
-    width: 80%;
-    font-size: 70px;
-    text-align: center;
-    bottom: 30%;
-    left: 10%;
-    font-weight: 800;
-    line-height: 0.9;
+  @keyframes section-02__subtitle {
+    0% {
+      bottom: -100%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
   }
-  .subtitle {
+}
+.section03-container {
+  .section-bg {
     position: absolute;
-    color: #fff;
-    width: 80%;
-    font-size: 40px;
-    font-weight: 400;
-    text-align: center;
-    bottom: 20%;
-    left: 10%;
-    line-height: 1;
+    z-index: 2;
+    animation-name: section03-bg;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    left: -100%;
+  }
+  .section-bg02{
+    position: absolute;
+    animation-name: section03-bg02;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 4s;
+    z-index: 1;
+    height: 100vh;
+  }
+  @keyframes section03-bg {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -300%;
+    }
+  }
+  @keyframes section03-bg02 {
+    0%{
+      left: 0;
+    }
+    100%{
+      left: -100%;
+    }
+  }
+  .section-03 {
+    background: rgba($color: #000000, $alpha: 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    .title {
+      position: absolute;
+      color: #fff;
+      width: 80%;
+      font-size: 70px;
+      text-align: center;
+      bottom: 30%;
+      left: 10%;
+      font-weight: 800;
+      line-height: 0.9;
+      z-index: 3;
+    }
+    .subtitle {
+      position: absolute;
+      color: #fff;
+      width: 80%;
+      font-size: 40px;
+      font-weight: 400;
+      text-align: center;
+      bottom: 20%;
+      left: 10%;
+      line-height: 1;
+      z-index: 3;
+    }
   }
 }
 .section-04 {
@@ -879,7 +962,7 @@ export default {
   }
 }
 .section15-container {
-    background: #e40524;
+  background: #e40524;
   .section-15 {
     display: grid;
     height: 100%;
@@ -890,10 +973,10 @@ export default {
     justify-items: center;
     align-items: center;
     align-content: center;
-    .logo{
+    .logo {
       width: 60%;
     }
-    .bptl{
+    .bptl {
       width: 40%;
     }
   }

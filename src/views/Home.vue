@@ -29,7 +29,7 @@
       </div>
       <div class="section">
         <span class="bricsa-square"></span>
-        <video autoplay class="section-bg">
+        <video autoplay loop preload="auto" class="section-bg">
           <source src="../assets/img/video01.mp4" type="video/mp4" />
         </video>
         <div class="section-02">
@@ -157,7 +157,7 @@
       </div>
       <div class="section section11-container">
         <span class="bricsa-square"></span>
-        <video autoplay class="section-bg">
+        <video autoplay loop preload="auto" class="section-bg">
           <source src="../assets/img/video02.mp4" type="video/mp4" />
         </video>
         <div class="section-11">
@@ -200,7 +200,7 @@
       </div>
       <div class="section section14-container">
         <span class="bricsa-square"></span>
-        <video autoplay class="section-bg">
+        <video autoplay loop preload="auto" class="section-bg">
           <source src="../assets/img/video03.mp4" type="video/mp4" />
         </video>
         <div class="section-14">
@@ -268,6 +268,7 @@ export default {
 <style lang="scss" scoped>
 .section {
   position: relative;
+  overflow: hidden;
 }
 
 .bricsa-square {

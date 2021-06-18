@@ -84,71 +84,142 @@
           </div>
         </div>
         <div class="section section05-container">
-          <img lazyload class="section-bg" src="../assets/img/05.jpg" />
+          <div class="section-bg_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="section-bg"
+              src="../assets/img/05.jpg"
+            />
+          </div>
           <div class="section-05">
-            <p class="title">
-              ¡Siempre algo <br />
-              que hacer!
-            </p>
-            <p class="subtitle">
-              Múltiples espacios <br />
-              y áreas comunes.
-            </p>
-            <img lazyload class="imgcut" src="../assets/img/06.jpg" />
+            <div class="title_container">
+              <p v-scrollanimation class="title">
+                ¡Siempre algo <br />
+                que hacer!
+              </p>
+            </div>
+            <div class="subtitle_container">
+              <p v-scrollanimation class="subtitle">
+                Múltiples espacios <br />
+                y áreas comunes.
+              </p>
+            </div>
+            <div class="imgcut_container">
+              <img
+                v-scrollanimation
+                lazyload
+                class="imgcut"
+                src="../assets/img/06.jpg"
+              />
+            </div>
           </div>
         </div>
         <div class="section section06-container">
           <div class="section-06">
             <img lazyload class="imgtop" src="../assets/img/20.jpg" />
-            <p class="title">
-              ¡Que rico <br />
-              <strong>vivir así!</strong>
-            </p>
-            <p class="subtitle">
-              Salón lounge<br />
-              para lucirte con<br />
-              tus amigos.
-            </p>
-            <img lazyload class="imgbottom" src="../assets/img/08.jpg" />
+            <div class="title_container">
+              <p v-scrollanimation class="title">
+                ¡Que rico <br />
+                <strong>vivir así!</strong>
+              </p>
+            </div>
+            <div class="subtitle_container">
+              <p v-scrollanimation class="subtitle">
+                Salón lounge<br />
+                para lucirte con<br />
+                tus amigos.
+              </p>
+            </div>
+            <div class="imgbottom_container">
+              <img
+                v-scrollanimation
+                lazyload
+                class="imgbottom"
+                src="../assets/img/08.jpg"
+              />
+            </div>
           </div>
         </div>
         <div class="section section07-container">
-          <img lazyload class="section-bg" src="../assets/img/4.jpg" />
+          <div class="sectionbg_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="section-bg"
+              src="../assets/img/4.jpg"
+            />
+          </div>
           <div class="section-07">
-            <p class="title">El espacio perfecto</p>
-            <p class="subtitle">
-              para <br />
-              ser tú
-            </p>
-            <img lazyload class="imgcut" src="../assets/img/10.jpg" />
-            <p class="downgrade">
-              Diseño Flexible a la medida<br />
-              de cómo quieras vivir.
-            </p>
+            <div class="title_container">
+              <p v-scrollanimation class="title">El espacio perfecto</p>
+            </div>
+            <div class="subtitle_container">
+              <p v-scrollanimation class="subtitle">
+                para <br />
+                ser tú
+              </p>
+            </div>
+            <div class="imgcut_container">
+              <img
+                v-scrollanimation
+                lazyload
+                class="imgcut"
+                src="../assets/img/10.jpg"
+              />
+            </div>
+            <div class="downgrade_container">
+              <p v-scrollanimation class="downgrade">
+                Diseño Flexible a la medida<br />
+                de cómo quieras vivir.
+              </p>
+            </div>
           </div>
         </div>
         <div class="section section08-container">
-          <img lazyload class="section-bg" src="../assets/img/11.jpg" />
-          <img lazyload class="section-bg02" src="../assets/img/12.jpg" />
+          <div class="sectionbg_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="section-bg"
+              src="../assets/img/11.jpg"
+            />
+          </div>
+          <div class="sectionbg02_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="section-bg02"
+              src="../assets/img/12.jpg"
+            />
+          </div>
           <div class="section-08">
-            <p class="title">
-              ¿Quedarse<br />
-              en cama?<br />
-              ¡Buena idea!
-            </p>
-            <p class="title02">
-              Un picoteo<br />
-              ¡y a relajarse!
-            </p>
-            <p class="subtitle">
-              Ventanas termopanel con<br />
-              marco PVC (aislación térmica<br />
-              y acústica).
-            </p>
-            <p class="subtitle02">
-              Cocina abierta y conectada<br />
-              con el living.
-            </p>
+            <div class="title01_container">
+              <p v-scrollanimation class="title">
+                ¿Quedarse<br />
+                en cama?<br />
+                ¡Buena idea!
+              </p>
+            </div>
+            <div class="title02_container">
+              <p v-scrollanimation class="title02">
+                Un picoteo<br />
+                ¡y a relajarse!
+              </p>
+            </div>
+            <div class="subtitle01_container">
+              <p v-scrollanimation class="subtitle">
+                Ventanas termopanel con<br />
+                marco PVC (aislación térmica<br />
+                y acústica).
+              </p>
+            </div>
+            <div class="subtitle02_container">
+              <p v-scrollanimation class="subtitle02">
+                Cocina abierta y conectada<br />
+                con el living.
+              </p>
+            </div>
           </div>
         </div>
         <div class="section section10-container">
@@ -264,7 +335,6 @@ export default {
           "page13",
           "page14",
           "page15",
-          "page16",
         ],
       },
     };
@@ -528,28 +598,23 @@ export default {
         z-index: 3;
         transition: all 3s ease-in-out 4s;
       }
-      .enter{
+      .enter {
         left: 10%;
       }
     }
   }
 }
 .section05-container {
-  .section-bg {
-    animation-name: section05-container;
-    animation-duration: 4s;
-    animation-fill-mode: both;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    left: -50%;
-  }
-  @keyframes section05-container {
-    0% {
+  .section-bg_container {
+    .section-bg {
+      transition: all 4s ease-in-out;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: -1;
       left: -100%;
     }
-    100% {
+    .enter {
       left: -50%;
     }
   }
@@ -562,70 +627,57 @@ export default {
     top: 0;
     left: 0;
     z-index: 1;
-    .title {
-      animation-name: section-05_title;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      position: absolute;
-      color: #fff;
-      width: 90%;
-      font-size: 40px;
-      text-align: center;
-      top: 5%;
-      left: 5%;
-      font-weight: 800;
-      line-height: 0.9;
-    }
-    @keyframes section-05_title {
-      0% {
-        top: -20%;
+    .title_container {
+      .title {
+        transition: all 1s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        font-size: 40px;
+        text-align: center;
+        top: 0;
+        opacity: 0;
+        left: 5%;
+        font-weight: 800;
+        line-height: 0.9;
       }
-      100% {
-        top: 5%;
+      .enter {
+        top: 5% !important;
+        opacity: 1;
       }
     }
-    .subtitle {
-      animation-name: section-05_subtitle;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-fill-mode: both;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 30px;
-      font-weight: 300;
-      text-align: center;
-      top: 20%;
-      left: 10%;
-      line-height: 1;
-    }
-    @keyframes section-05_subtitle {
-      0% {
-        top: -20%;
+    .subtitle_container {
+      .subtitle {
+        transition: all 1s ease-in-out 1s;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        top: 0;
+        opacity: 0;
+        left: 10%;
+        line-height: 1;
       }
-      100% {
-        top: 20%;
+      .enter {
+        top: 20% !important;
+        opacity: 1;
       }
     }
-    .imgcut {
-      animation-name: section-05_imgcut;
-      animation-duration: 2.5s;
-      animation-delay: 2s;
-      animation-fill-mode: both;
-      filter: brightness(0.7);
-      width: 60%;
-      height: 55%;
-      object-fit: cover;
-      object-position: center;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-    @keyframes section-05_imgcut {
-      0% {
+    .imgcut_container {
+      .imgcut {
+        transition: all 2.5s ease-in-out 2s;
+        filter: brightness(0.7);
+        width: 60%;
+        height: 55%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        bottom: 0;
         right: -60%;
       }
-      100% {
+      .enter {
         right: 0;
       }
     }
@@ -643,75 +695,63 @@ export default {
       object-fit: cover;
       object-position: -240px center;
     }
-    .imgbottom {
-      animation: section06_imgbottom 3s both;
-      height: 55%;
-      width: 270%;
-      position: absolute;
-      bottom: 0;
-      left: -20%;
-      object-fit: cover;
-    }
-    @keyframes section06_imgbottom {
-      0% {
+    .imgbottom_container {
+      .imgbottom {
+        transition: all 3s ease-in-out;
+        height: 55%;
+        width: 270%;
+        position: absolute;
+        bottom: 0;
         left: -70%;
+        object-fit: cover;
       }
-      100% {
+      .enter {
         left: -20%;
       }
     }
-    .title {
-      animation: section06_title 2s both;
-      position: absolute;
-      color: #fff;
-      width: 90%;
-      font-size: 50px;
-      text-align: center;
-      top: 5%;
-      left: 5%;
-      font-weight: 300;
-      line-height: 0.9;
-    }
-    @keyframes section06_title {
-      0% {
-        left: -100%;
+    .title_container {
+      .title {
+        transition: all 2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        font-size: 50px;
+        text-align: center;
+        top: 0;
+        left: -80%;
+        font-weight: 300;
+        line-height: 0.9;
       }
-      100% {
+      .enter {
         left: 5%;
       }
     }
-    .subtitle {
-      animation: section06_imgsubtitle 2s both;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 30px;
-      font-weight: 300;
-      text-align: center;
-      top: 20%;
-      left: 10%;
-      line-height: 1;
-    }
-    @keyframes section06_imgsubtitle {
-      0% {
+    .subtitle_container {
+      .subtitle {
+        transition: all 2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        top: 20%;
         left: 100%;
+        line-height: 1;
       }
-      100% {
+      .enter {
         left: 10%;
       }
     }
   }
 }
 .section07-container {
-  .section-bg {
-    left: -10%;
-    animation: section07-bg 7s both;
-  }
-  @keyframes section07-bg {
-    0% {
+  .sectionbg_container {
+    .section-bg {
       left: -10%;
+      transition: all 7s ease-in-out;
     }
-    100% {
+    .enter {
       left: -200%;
     }
   }
@@ -724,195 +764,208 @@ export default {
     top: 0;
     left: 0;
     z-index: 1;
-    .imgcut {
-      animation: section07-imgcut 2s both;
-      width: 40%;
-      height: 25%;
-      object-fit: cover;
-      object-position: -100px center;
-      position: absolute;
-      left: 0;
-      bottom: 25%;
-    }
-    @keyframes section07-imgcut {
-      0% {
+    .imgcut_container {
+      .imgcut {
+        transition: all 2s ease-in-out;
+        width: 40%;
+        height: 25%;
+        object-fit: cover;
+        object-position: -100px center;
+        position: absolute;
         left: -40%;
+        bottom: 25%;
       }
-      100% {
+      .enter {
         left: 0;
       }
     }
-    .title {
-      animation: section07-title 2s both;
-      position: absolute;
-      color: #fff;
-      width: 90%;
-      font-size: 30px;
-      text-align: center;
-      top: 8%;
-      left: 5%;
-      font-weight: 300;
-      line-height: 0.9;
-    }
-    @keyframes section07-title {
-      0% {
-        top: 100%;
+    .title_container {
+      .title {
+        transition: all 2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        font-size: 30px;
+        text-align: center;
+        top: 70%;
+        left: 5%;
+        font-weight: 300;
+        line-height: 0.9;
+        opacity: 0;
       }
-      100% {
+      .enter {
+        opacity: 1;
         top: 8%;
       }
     }
-    .subtitle {
-      animation: section07-subtitle 2s both;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 100px;
-      font-weight: 800;
-      text-align: center;
-      top: 2%;
-      left: 10%;
-      line-height: 1;
-    }
-    @keyframes section07-subtitle {
-      0% {
-        top: 100%;
+    .subtitle_container {
+      .subtitle {
+        transition: all 2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 100px;
+        font-weight: 800;
+        text-align: center;
+        top: 70%;
+        left: 10%;
+        line-height: 1;
+        opacity: 0;
       }
-      100% {
+      .enter {
+        opacity: 1;
         top: 2%;
       }
     }
-    .downgrade {
-      animation: section07-downgrade 2s both;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 26px;
-      left: 10%;
-      font-weight: 300;
-      bottom: 5%;
-    }
-    @keyframes section07-downgrade {
-      0% {
-        bottom: -100%;
+    .downgrade_container {
+      .downgrade {
+        transition: all 2s ease-in-out;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 26px;
+        left: 10%;
+        font-weight: 300;
+        bottom: 0;
+        opacity: 0;
       }
-      100% {
+      .enter {
+        opacity: 1;
         bottom: 5%;
       }
     }
   }
 }
 .section08-container {
-  .section-bg {
-    animation: section08_bg 6s both 2s;
-    position: absolute;
-    filter: brightness(0.7);
-    z-index: 0;
-  }
-  @keyframes section08_bg {
-    0% {
+  .sectionbg_container {
+    .section-bg {
+      transition: all 6s ease-in-out 1s;
+      position: absolute;
+      filter: brightness(0.7);
+      z-index: 0;
       left: -100%;
     }
-    100% {
+    .enter {
       left: 160%;
     }
   }
-  .section-bg02 {
-    animation: section08_bg02 6s both 6s;
-    position: absolute;
-    height: 100vh;
-    filter: brightness(0.7);
-    z-index: -1;
-  }
-  @keyframes section08_bg02 {
-    0% {
+  .sectionbg02_container {
+    .section-bg02 {
+      transition: all 6s ease-in-out 6s;
+      position: absolute;
+      height: 100vh;
+      filter: brightness(0.7);
+      z-index: -1;
       left: -100%;
     }
-    100% {
+    .enter {
       left: -350%;
     }
   }
   .section-08 {
     color: #fff;
-    .title {
-      animation: section08_title01 5s 1s forwards;
-      position: absolute;
-      color: #fff;
-      width: 90%;
-      font-size: 60px;
-      text-align: center;
-      bottom: 15%;
-      left: 5%;
-      font-weight: 800;
-      line-height: 0.9;
-      opacity: 0;
-    }
-    @keyframes section08_title01 {
-      0% {
+    .title01_container {
+      .title {
+        transition: all 1s ease-in-out 1s;
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        font-size: 60px;
+        text-align: center;
+        bottom: 15%;
+        left: 5%;
+        font-weight: 800;
+        line-height: 0.9;
         filter: blur(20px);
         opacity: 0;
       }
-      10% {
+      .enter {
+        animation: fade-out 1s both 6s;
         filter: blur(0);
         opacity: 1;
       }
-      90% {
-        filter: blur(0);
-        opacity: 1;
+      @keyframes fade-out {
+        0% {
+          filter: blur(0);
+          opacity: 1;
+        }
+        100% {
+          filter: blur(20px);
+          opacity: 0;
+        }
       }
-      100% {
+    }
+    .subtitle01_container {
+      .subtitle {
+        transition: all 1s ease-in-out 1s;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        bottom: 5%;
+        left: 10%;
+        line-height: 1;
+        opacity: 0;
         filter: blur(20px);
         opacity: 0;
       }
+      .enter {
+        animation: fade-out 1s both 6s;
+        filter: blur(0);
+        opacity: 1;
+      }
+      @keyframes fade-out {
+        0% {
+          filter: blur(0);
+          opacity: 1;
+        }
+        100% {
+          filter: blur(20px);
+          opacity: 0;
+        }
+      }
     }
-    .subtitle {
-      animation: section08_title01 5s 1s forwards;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 26px;
-      font-weight: 300;
-      text-align: center;
-      bottom: 5%;
-      left: 10%;
-      line-height: 1;
-      opacity: 0;
-    }
-    .title02 {
-      animation: section08_title02 1s 6s forwards;
-      position: absolute;
-      color: #fff;
-      width: 90%;
-      font-size: 60px;
-      text-align: center;
-      top: 3%;
-      left: 5%;
-      font-weight: 800;
-      line-height: 0.9;
-      opacity: 0;
-    }
-    @keyframes section08_title02 {
-      0% {
+    .title02_container {
+      .title02 {
+        transition: all 1s ease-in-out 6s;
+        position: absolute;
+        color: #fff;
+        width: 90%;
+        font-size: 60px;
+        text-align: center;
+        top: 3%;
+        left: 5%;
+        font-weight: 800;
+        line-height: 0.9;
         filter: blur(20px);
         opacity: 0;
       }
-      100% {
+      .enter {
         filter: blur(0);
         opacity: 1;
       }
     }
-    .subtitle02 {
-      animation: section08_title02 1s 6s forwards;
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 26px;
-      font-weight: 300;
-      text-align: center;
-      top: 24%;
-      left: 10%;
-      line-height: 1;
-      opacity: 0;
+    .subtitle02_container {
+      .subtitle02 {
+        transition: all 1s ease-in-out 6s;
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        top: 24%;
+        left: 10%;
+        line-height: 1;
+        filter: blur(20px);
+        opacity: 0;
+      }
+      .enter {
+        filter: blur(0);
+        opacity: 1;
+      }
     }
   }
 }

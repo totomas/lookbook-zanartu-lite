@@ -4,6 +4,10 @@ import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
 
+import ScrollAnimation from './assets/directives/scrollanimation'
+
+Vue.directive('scrollanimation', ScrollAnimation);
+
 Vue.config.productionTip = false;
 
 new Vue({

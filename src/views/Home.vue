@@ -1,207 +1,238 @@
 <template>
   <div>
     <div class="lookbook-container">
-    <span class="bricsa-square"></span>
-    <div class="section section01-container">
-      <img lazyload class="section-bg" src="../assets/img/01.jpg" />
-      <div class="section-01">
-        <img
-          lazyload
-          class="section-logo"
-          src="../assets/img/logo-comuna.png"
-        />
-        <p class="call">
-          Vívelo por <br />
-          dentro y<br />
-          por fuera
-        </p>
-        <p class="downgrade">
-          Sal a vivir tu <br />
-          nuevo departamento.
-        </p>
-        <p class="uptext">Vívelo</p>
-        <img
-          lazyload
-          class="arrow-down"
-          src="../assets/img/arrow-down.png"
-          alt=""
-        />
-      </div>
-    </div>
-    <div class="section">
-      <video autoplay loop preload="auto" class="section-bg">
-        <source src="../assets/img/video01.mp4" type="video/mp4" />
-      </video>
-      <div class="section-02">
-        <img src="../assets/img/02.jpg" />
-        <p class="title">Date una vuelta y respira</p>
-        <p class="subtitle">¡Está rodeado de áreas verdes!</p>
-      </div>
-    </div>
-    <div class="section section03-container">
-      <img lazyload class="section-bg" src="../assets/img/03.jpg" alt="" />
-      <img lazyload class="disfruta" src="../assets/img/disfruta.png" />
-      <img lazyload class="section-bg02" src="../assets/img/04.jpg" alt="" />
-      <div class="section-03">
-        <p class="title">
-          Disfruta <br />
-          tu terraza <br />y tu plaza
-        </p>
-        <p class="subtitle">Depto. con opción a terraza privada.</p>
-        <p class="subtitle02">
-          Frente a Plaza Zañartu y cercano a otros parques.
-        </p>
-      </div>
-    </div>
-    <div class="section section05-container">
-      <img lazyload class="section-bg" src="../assets/img/05.jpg" />
-      <div class="section-05">
-        <p class="title">
-          ¡Siempre algo <br />
-          que hacer!
-        </p>
-        <p class="subtitle">
-          Múltiples espacios <br />
-          y áreas comunes.
-        </p>
-        <img lazyload class="imgcut" src="../assets/img/06.jpg" />
-      </div>
-    </div>
-    <div class="section section06-container">
-      <div class="section-06">
-        <img lazyload class="imgtop" src="../assets/img/20.jpg" />
-        <p class="title">
-          ¡Que rico <br />
-          <strong>vivir así!</strong>
-        </p>
-        <p class="subtitle">
-          Salón lounge<br />
-          para lucirte con<br />
-          tus amigos.
-        </p>
-        <img lazyload class="imgbottom" src="../assets/img/08.jpg" />
-      </div>
-    </div>
-    <div class="section section07-container">
-      <img lazyload class="section-bg" src="../assets/img/4.jpg" />
-      <div class="section-07">
-        <p class="title">El espacio perfecto</p>
-        <p class="subtitle">
-          para <br />
-          ser tú
-        </p>
-        <img lazyload class="imgcut" src="../assets/img/10.jpg" />
-        <p class="downgrade">
-          Diseño Flexible a la medida<br />
-          de cómo quieras vivir.
-        </p>
-      </div>
-    </div>
-    <div class="section section08-container">
-      <img lazyload class="section-bg" src="../assets/img/11.jpg" />
-      <img lazyload class="section-bg02" src="../assets/img/12.jpg" />
-      <div class="section-08">
-        <p class="title">
-          ¿Quedarse<br />
-          en cama?<br />
-          ¡Buena idea!
-        </p>
-        <p class="title02">
-          Un picoteo<br />
-          ¡y a relajarse!
-        </p>
-        <p class="subtitle">
-          Ventanas termopanel con<br />
-          marco PVC (aislación térmica<br />
-          y acústica).
-        </p>
-        <p class="subtitle02">
-          Cocina abierta y conectada<br />
-          con el living.
-        </p>
-      </div>
-    </div>
-    <div class="section section10-container">
-      <img lazyload class="section-bg" src="../assets/img/13.jpg" />
-      <div class="section-10">
-        <p class="title">
-          Muévete<br />
-          indoor o<br />
-          outdoor
-        </p>
-        <p class="subtitle">
-          Gimnasio interior<br />
-          con salida al jardín.
-        </p>
-      </div>
-    </div>
-    <div class="section section11-container">
-      <video autoplay loop preload="auto" class="section-bg">
-        <source src="../assets/img/video02.mp4" type="video/mp4" />
-      </video>
-      <div class="section-11">
-        <p class="title">Así da gusto</p>
-        <p class="subtitle">trabajar</p>
-        <p class="downgrade">Zonas Cowork.</p>
-        <img class="section-11__img01" src="../assets/img/08.jpg" />
-        <img class="section-11__img02" src="../assets/img/14.jpg" />
-      </div>
-    </div>
-    <div class="section section12-container">
-      <img lazyload class="section-bg" src="../assets/img/15.jpg" />
-      <div class="section-12">
-        <p class="title">
-          Recibe<br />
-          lo que quieras
-        </p>
-        <p class="subtitle">tranquilo</p>
-        <p class="downgrade">Smart lockers.</p>
-      </div>
-    </div>
-    <div class="section section13-container">
-      <img lazyload class="section-bg" src="../assets/img/16.jpg" />
-      <div class="section-13">
-        <img lazyload class="entorno" src="../assets/img/entorno.png" />
-        <p class="title">¡Mantengamos viva</p>
-        <p class="subtitle">
-          la vida de<br />
-          barrio!
-        </p>
-        <p class="downgrade">
-          Ubicado en un barrio<br />
-          tradicional de Ñuñoa, cercano<br />
-          a todo lo que necesitas.
-        </p>
-        <img lazyload class="fachada" src="../assets/img/17.jpg" />
-      </div>
-    </div>
-    <div class="section section14-container">
-      <video autoplay loop preload="auto" class="section-bg">
-        <source src="../assets/img/video03.mp4" type="video/mp4" />
-      </video>
-      <div class="section-14">
-        <img class="section-14__img01" src="../assets/img/11.jpg" />
-        <p class="title">
-          Vívelo<br />
-          por dentro<br />
-          y por fuera
-        </p>
-        <p class="subtitle">
-          La llave para comenzar<br />
-          a disfrutarlo<br />
-          la tienes tú.
-        </p>
-        <img class="section-14__img02" src="../assets/img/18.jpg" />
-        <img class="section-14__img03" src="../assets/img/19.jpg" />
-      </div>
-    </div>
-    <div class="section section15-container">
-      <div class="section-15">
-        <img lazyload class="logo" src="../assets/img/bricsa.png" />
+      <full-page ref="fullpage" :options="options" id="fullpage">
+        <span class="bricsa-square"></span>
+        <div class="section section01-container">
+          <img lazyload class="section-bg" src="../assets/img/01.jpg" />
+          <div class="section-01">
+            <img
+              lazyload
+              class="section-logo"
+              src="../assets/img/logo-comuna.png"
+            />
+            <p class="call">
+              Vívelo por <br />
+              dentro y<br />
+              por fuera
+            </p>
+            <p class="downgrade">
+              Sal a vivir tu <br />
+              nuevo departamento.
+            </p>
+            <p class="uptext">Vívelo</p>
+            <img
+              lazyload
+              class="arrow-down"
+              src="../assets/img/arrow-down.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="section section02-container">
+          <video autoplay loop preload="auto" class="section-bg">
+            <source src="../assets/img/video01.mp4" type="video/mp4" />
+          </video>
+          <div class="section-02">
+            <img src="../assets/img/02.jpg" />
+            <p class="title">Date una vuelta y respira</p>
+            <p v-scrollanimation class="subtitle">
+              ¡Está rodeado de áreas verdes!
+            </p>
+          </div>
+        </div>
+        <div class="section section03-container">
+          <img
+            v-scrollanimation
+            lazyload
+            class="section-bg"
+            src="../assets/img/03.jpg"
+            alt=""
+          />
+          <div class="disfruta_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="disfruta"
+              src="../assets/img/disfruta.png"
+            />
+          </div>
+          <div class="section-bg02_container">
+            <img
+              v-scrollanimation
+              lazyload
+              class="section-bg02"
+              src="../assets/img/04.jpg"
+              alt=""
+            />
+          </div>
+          <div class="section-03">
+            <p class="title">
+              Disfruta <br />
+              tu terraza <br />y tu plaza
+            </p>
+            <div class="subtitle_container">
+              <p v-scrollanimation class="subtitle">
+                Depto. con opción a terraza privada.
+              </p>
+            </div>
+            <div class="subtitle02_container">
+              <p v-scrollanimation class="subtitle02">
+                Frente a Plaza Zañartu y cercano a otros parques.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section section05-container">
+          <img lazyload class="section-bg" src="../assets/img/05.jpg" />
+          <div class="section-05">
+            <p class="title">
+              ¡Siempre algo <br />
+              que hacer!
+            </p>
+            <p class="subtitle">
+              Múltiples espacios <br />
+              y áreas comunes.
+            </p>
+            <img lazyload class="imgcut" src="../assets/img/06.jpg" />
+          </div>
+        </div>
+        <div class="section section06-container">
+          <div class="section-06">
+            <img lazyload class="imgtop" src="../assets/img/20.jpg" />
+            <p class="title">
+              ¡Que rico <br />
+              <strong>vivir así!</strong>
+            </p>
+            <p class="subtitle">
+              Salón lounge<br />
+              para lucirte con<br />
+              tus amigos.
+            </p>
+            <img lazyload class="imgbottom" src="../assets/img/08.jpg" />
+          </div>
+        </div>
+        <div class="section section07-container">
+          <img lazyload class="section-bg" src="../assets/img/4.jpg" />
+          <div class="section-07">
+            <p class="title">El espacio perfecto</p>
+            <p class="subtitle">
+              para <br />
+              ser tú
+            </p>
+            <img lazyload class="imgcut" src="../assets/img/10.jpg" />
+            <p class="downgrade">
+              Diseño Flexible a la medida<br />
+              de cómo quieras vivir.
+            </p>
+          </div>
+        </div>
+        <div class="section section08-container">
+          <img lazyload class="section-bg" src="../assets/img/11.jpg" />
+          <img lazyload class="section-bg02" src="../assets/img/12.jpg" />
+          <div class="section-08">
+            <p class="title">
+              ¿Quedarse<br />
+              en cama?<br />
+              ¡Buena idea!
+            </p>
+            <p class="title02">
+              Un picoteo<br />
+              ¡y a relajarse!
+            </p>
+            <p class="subtitle">
+              Ventanas termopanel con<br />
+              marco PVC (aislación térmica<br />
+              y acústica).
+            </p>
+            <p class="subtitle02">
+              Cocina abierta y conectada<br />
+              con el living.
+            </p>
+          </div>
+        </div>
+        <div class="section section10-container">
+          <img lazyload class="section-bg" src="../assets/img/13.jpg" />
+          <div class="section-10">
+            <p class="title">
+              Muévete<br />
+              indoor o<br />
+              outdoor
+            </p>
+            <p class="subtitle">
+              Gimnasio interior<br />
+              con salida al jardín.
+            </p>
+          </div>
+        </div>
+        <div class="section section11-container">
+          <video autoplay loop preload="auto" class="section-bg">
+            <source src="../assets/img/video02.mp4" type="video/mp4" />
+          </video>
+          <div class="section-11">
+            <p class="title">Así da gusto</p>
+            <p class="subtitle">trabajar</p>
+            <p class="downgrade">Zonas Cowork.</p>
+            <img class="section-11__img01" src="../assets/img/08.jpg" />
+            <img class="section-11__img02" src="../assets/img/14.jpg" />
+          </div>
+        </div>
+        <div class="section section12-container">
+          <img lazyload class="section-bg" src="../assets/img/15.jpg" />
+          <div class="section-12">
+            <p class="title">
+              Recibe<br />
+              lo que quieras
+            </p>
+            <p class="subtitle">tranquilo</p>
+            <p class="downgrade">Smart lockers.</p>
+          </div>
+        </div>
+        <div class="section section13-container">
+          <img lazyload class="section-bg" src="../assets/img/16.jpg" />
+          <div class="section-13">
+            <img lazyload class="entorno" src="../assets/img/entorno.png" />
+            <p class="title">¡Mantengamos viva</p>
+            <p class="subtitle">
+              la vida de<br />
+              barrio!
+            </p>
+            <p class="downgrade">
+              Ubicado en un barrio<br />
+              tradicional de Ñuñoa, cercano<br />
+              a todo lo que necesitas.
+            </p>
+            <img lazyload class="fachada" src="../assets/img/17.jpg" />
+          </div>
+        </div>
+        <div class="section section14-container">
+          <video autoplay loop preload="auto" class="section-bg">
+            <source src="../assets/img/video03.mp4" type="video/mp4" />
+          </video>
+          <div class="section-14">
+            <img class="section-14__img01" src="../assets/img/11.jpg" />
+            <p class="title">
+              Vívelo<br />
+              por dentro<br />
+              y por fuera
+            </p>
+            <p class="subtitle">
+              La llave para comenzar<br />
+              a disfrutarlo<br />
+              la tienes tú.
+            </p>
+            <img class="section-14__img02" src="../assets/img/18.jpg" />
+            <img class="section-14__img03" src="../assets/img/19.jpg" />
+          </div>
+        </div>
+        <div class="section section15-container">
+          <div class="section-15">
+            <img lazyload class="logo" src="../assets/img/bricsa.png" />
 
-        <img lazyload class="bptl" src="../assets/img/bptl.png" />
-      </div>
-    </div>
+            <img lazyload class="bptl" src="../assets/img/bptl.png" />
+          </div>
+        </div>
+      </full-page>
     </div>
   </div>
 </template>
@@ -242,7 +273,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.lookbook-container{
+.lookbook-container {
   position: relative;
 }
 .section {
@@ -364,49 +395,44 @@ export default {
     }
   }
 }
-.section-02 {
-  position: absolute;
-  width: 80%;
-  height: 75%;
-  left: 10%;
-  top: 13.5%;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
-  .title {
+.section02-container {
+  position: relative;
+
+  .section-02 {
     position: absolute;
-    color: #fff;
-    width: 100%;
-    font-size: 70px;
-    text-align: center;
-    bottom: 13%;
-    font-weight: 800;
-    line-height: 0.9;
-  }
-  .subtitle {
-    animation-name: section-02__subtitle;
-    animation-duration: 2s;
-    animation-fill-mode: both;
-    position: absolute;
-    color: #fff;
-    width: 100%;
-    font-size: 40px;
-    text-align: center;
-    bottom: 0;
-    line-height: 1;
-  }
-  @keyframes section-02__subtitle {
-    0% {
+    width: 80%;
+    height: 75%;
+    left: 10%;
+    top: 13.5%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+    .title {
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      font-size: 70px;
+      text-align: center;
+      bottom: 13%;
+      font-weight: 800;
+      line-height: 0.9;
+    }
+    .subtitle {
+      transition: all ease-in-out;
+      transition-duration: 2s;
       bottom: -100%;
       opacity: 0;
     }
-    50% {
-      opacity: 0;
-    }
-    100% {
+    .enter {
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      font-size: 40px;
+      text-align: center;
+      line-height: 1;
       bottom: 0;
       opacity: 1;
     }
@@ -416,68 +442,34 @@ export default {
   .section-bg {
     position: absolute;
     z-index: 3;
-    animation-name: section03-bg;
-    animation-duration: 10s;
-    animation-fill-mode: both;
-    left: -100%;
+    transition: all 6s ease-in-out 1s;
+    left: 0;
   }
-  .disfruta {
-    animation-name: section03-disfruta;
-    animation-duration: 5s;
-    animation-delay: 4s;
-    animation-fill-mode: both;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    z-index: 2;
+  .enter {
+    left: -300%;
   }
-  .section-bg02 {
-    position: absolute;
-    animation-name: section03-bg02;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-delay: 4s;
-    z-index: 1;
-    height: 100vh;
-  }
-  @keyframes section03-bg {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -300%;
-    }
-  }
-  @keyframes section03-bg02 {
-    0% {
-      left: 0;
-    }
-    100% {
-      left: -100%;
-    }
-  }
-  @keyframes section03-subtitle {
-    0% {
-      left: 10%;
-    }
-    100% {
-      left: -100%;
-    }
-  }
-  @keyframes section03-subtitle02 {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: 10%;
-    }
-  }
-  @keyframes section03-disfruta {
-    0% {
+  .disfruta_container {
+    .disfruta {
+      transition: all 5s ease-in-out 4s;
+      position: absolute;
+      top: 0;
       left: 50%;
+      z-index: 2;
     }
-    100% {
+    .enter {
       left: -140%;
+    }
+  }
+  .section-bg02_container {
+    .section-bg02 {
+      position: absolute;
+      transition: all 3s ease-in-out 4s;
+      z-index: 1;
+      height: 100vh;
+      left: 0;
+    }
+    .enter {
+      left: -100%;
     }
   }
   .section-03 {
@@ -504,37 +496,41 @@ export default {
       line-height: 0.9;
       z-index: 3;
     }
-    .subtitle {
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 40px;
-      font-weight: 400;
-      text-align: center;
-      bottom: 20%;
-      left: 10%;
-      line-height: 1;
-      z-index: 3;
-      animation-name: section03-subtitle;
-      animation-duration: 6s;
-      animation-delay: 2s;
-      animation-fill-mode: both;
+    .subtitle_container {
+      .subtitle {
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        bottom: 20%;
+        left: 10%;
+        line-height: 1;
+        z-index: 3;
+        transition: all 4s ease-in-out 2s;
+      }
+      .enter {
+        left: -100%;
+      }
     }
-    .subtitle02 {
-      position: absolute;
-      color: #fff;
-      width: 80%;
-      font-size: 30px;
-      font-weight: 400;
-      text-align: center;
-      bottom: 20%;
-      left: 10%;
-      line-height: 1;
-      z-index: 3;
-      animation-name: section03-subtitle02;
-      animation-duration: 3s;
-      animation-fill-mode: both;
-      animation-delay: 4s;
+    .subtitle02_container {
+      .subtitle02 {
+        position: absolute;
+        color: #fff;
+        width: 80%;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+        bottom: 20%;
+        left: 100%;
+        line-height: 1;
+        z-index: 3;
+        transition: all 3s ease-in-out 4s;
+      }
+      .enter{
+        left: 10%;
+      }
     }
   }
 }

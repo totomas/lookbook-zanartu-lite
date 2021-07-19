@@ -348,15 +348,11 @@
             />
           </div>
           <p class="title">¡Mantengamos viva</p>
-          <p class="subtitle">
-            la vida de
-            barrio!
-          </p>
+          <p class="subtitle">la vida de barrio!</p>
           <div class="downgrade_container">
             <p v-scrollanimation class="downgrade">
-              Ubicado en un barrio
-              tradicional de Ñuñoa, cercano
-              a todo lo que necesitas.
+              Ubicado en un barrio tradicional de Ñuñoa, cercano a todo lo que
+              necesitas.
             </p>
           </div>
           <img lazyload class="fachada" src="../assets/img/17.jpg" />
@@ -455,11 +451,13 @@ export default {
 <style lang="scss" scoped>
 .lookbook-container {
   position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 .section {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 101vh;
 }
 
 .bricsa-square {
@@ -478,14 +476,6 @@ export default {
   }
   100% {
     transform: scale(1);
-  }
-}
-@keyframes arrow-down {
-  0% {
-    bottom: 5%;
-  }
-  100% {
-    bottom: 3%;
   }
 }
 .loading {
@@ -511,14 +501,7 @@ export default {
   }
 }
 
-@keyframes arrow-down {
-  0% {
-    margin-top: 0;
-  }
-  100% {
-    margin-top: 10px;
-  }
-}
+
 .instructions {
   background: #e40524;
   position: relative;
@@ -558,9 +541,17 @@ export default {
     }
   }
 }
+@keyframes arrow-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
 
 .page-btn {
-  z-index: 16;
+  z-index: 13;
   position: fixed;
   bottom: 20px;
   right: 10px;
@@ -662,26 +653,6 @@ export default {
       }
       100% {
         top: 20%;
-      }
-    }
-    .arrow-down {
-      animation-name: arrow-down;
-      animation-duration: 1s;
-      animation-fill-mode: both;
-      animation-iteration-count: infinite;
-      animation-direction: alternate-reverse;
-      width: 100px;
-      position: absolute;
-      margin: 0 auto;
-      left: 150px;
-      bottom: 20px;
-    }
-    @keyframes arrow-down {
-      0% {
-        bottom: 25px;
-      }
-      100% {
-        bottom: 10px;
       }
     }
   }
@@ -979,7 +950,7 @@ export default {
       transition: all 7s ease-in-out;
     }
     .enter {
-      left: -200%;
+      left: -190%;
     }
   }
   .section-07 {
@@ -999,7 +970,7 @@ export default {
         object-fit: cover;
         object-position: -100px center;
         position: absolute;
-        left: -40%;
+        left: -39%;
         bottom: 25%;
       }
       .enter {
@@ -1086,7 +1057,7 @@ export default {
       left: -100%;
     }
     .enter {
-      left: -350%;
+      left: -330%;
     }
   }
   .section-08 {
@@ -1550,104 +1521,104 @@ export default {
   }
 }
 .section14-container {
-	.section-bg {
-		filter: brightness(1);
-	}
-	.section-14 {
-		color: #fff;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 90%;
-		left: 0;
-		opacity: 0;
-		.section-14__img01 {
-			z-index: 2;
-			filter: brightness(0.7);
-			width: 60%;
-			height: 30%;
-			object-fit: cover;
-			position: absolute;
-			top: 0;
-			right: 10%;
-		}
-		.section-14__img02 {
-			filter: brightness(0.7);
-			position: absolute;
-			width: 70%;
-			height: 80%;
-			object-fit: cover;
-			left: 15%;
-			top: 10%;
-		}
-		.section-14__img03 {
-			z-index: 2;
-			width: 60%;
-			height: 30%;
-			object-fit: cover;
-			position: absolute;
-			bottom: 0;
-			left: 10%;
-		}
-		.title {
-			z-index: 2;
-			position: absolute;
-			width: 80%;
-			left: 20%;
-			text-align: left;
-			top: 28%;
-			font-size: 50px;
-			font-weight: 800;
-			line-height: 1;
-		}
-		.subtitle {
-			z-index: 2;
-			position: absolute;
-			width: 80%;
-			left: 20%;
-			top: 55%;
-			font-size: 20px;
-			text-align: left;
-			font-weight: 300;
-		}
-	}
-	.enter {
-		top: 0;
-		opacity: 1;
-	}
+  .section-bg {
+    filter: brightness(1);
+  }
+  .section-14 {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 90%;
+    left: 0;
+    opacity: 0;
+    .section-14__img01 {
+      z-index: 2;
+      filter: brightness(0.7);
+      width: 60%;
+      height: 30%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 10%;
+    }
+    .section-14__img02 {
+      filter: brightness(0.7);
+      position: absolute;
+      width: 70%;
+      height: 80%;
+      object-fit: cover;
+      left: 15%;
+      top: 10%;
+    }
+    .section-14__img03 {
+      z-index: 2;
+      width: 60%;
+      height: 30%;
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+    }
+    .title {
+      z-index: 2;
+      position: absolute;
+      width: 80%;
+      left: 20%;
+      text-align: left;
+      top: 28%;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .subtitle {
+      z-index: 2;
+      position: absolute;
+      width: 80%;
+      left: 20%;
+      top: 55%;
+      font-size: 20px;
+      text-align: left;
+      font-weight: 300;
+    }
+  }
+  .enter {
+    top: 0;
+    opacity: 1;
+  }
 }
 .section15-container {
-	.section-bg {
-		height: 100vh;
-	}
-	img {
-		width: 40%;
-		position: absolute;
-		left: 30%;
-		bottom: 20%;
-	}
+  .section-bg {
+    height: 100vh;
+  }
+  img {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+  }
 }
 .section16-container {
-	background: #e40524;
-	display: flex;
-	.section-16 {
-		display: grid;
-		height: 100%;
-		grid-template-columns: 100%;
-		grid-template-rows: repeat(2, min-content);
-		row-gap: 30px;
-		justify-content: center;
-		justify-items: center;
-		align-items: center;
-		align-content: center;
-		align-self: center;
-		.logo {
-			width: 60%;
-		}
-		.bptl {
-			width: 40%;
-		}
-	}
+  background: #e40524;
+  display: flex;
+  .section-16 {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 30px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    .logo {
+      width: 60%;
+    }
+    .bptl {
+      width: 40%;
+    }
+  }
 }
 
 @media screen and (max-width: 426px) {
@@ -1697,7 +1668,7 @@ export default {
       .title {
         font-size: 38px;
       }
-      .subtitle{
+      .subtitle {
         font-size: 40px;
       }
     }

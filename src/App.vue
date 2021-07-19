@@ -7,18 +7,22 @@
 <style lang="scss">
 html {
   scroll-behavior: smooth;
+  transition: 400ms;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 #app {
   overflow: hidden;
   max-width: 426px;
   margin: 0 auto;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-body{
+body {
   margin: 0 !important;
 }
 

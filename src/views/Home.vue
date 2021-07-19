@@ -1,8 +1,35 @@
 <template>
   <div>
     <div class="lookbook-container">
+      <div class="loading" v-if="isLoading">
+        <img lazyload src="../assets/img/logo-comuna.png" />
+        <progress-bar
+          class="loadingBar"
+          bar-color="#fff"
+          bg-color="#e40524"
+          text-fg-color="#fff"
+          size="medium"
+          :val="increasing_pct"
+          :text="increasing_pct + '%'"
+        />
+      </div>
+      <div class="instructions" v-show="isCover">
+        <p>Disfruta una navegación única, deslizando hacia abajo</p>
+        <img src="../assets/img/scroll.png" />
+        <button class="instructions_btn" @click="isCover = !isCover">
+          Empezar a navegar
+        </button>
+      </div>
+      <div class="page-btn">
+        <a :href="'#section0' + currentStep" @click="Prev">
+          <img src="../assets/img/up-arrow.png" alt=""
+        /></a>
+        <a :href="'#section0' + currentStep" @click="Next">
+          <img src="../assets/img/arrow-down.png" alt=""
+        /></a>
+      </div>
       <span class="bricsa-square"></span>
-      <div class="section section01-container">
+      <div class="section section01-container" id="section01">
         <img lazyload class="section-bg" src="../assets/img/01.jpg" />
         <div class="section-01">
           <img
@@ -20,16 +47,17 @@
             nuevo departamento.
           </p>
           <p class="uptext">Vívelo</p>
-          <img
-            lazyload
-            class="arrow-down"
-            src="../assets/img/arrow-down.png"
-            alt=""
-          />
         </div>
       </div>
-      <div class="section section02-container">
-        <video autoplay loop preload="auto" class="section-bg">
+      <div class="section section02-container" id="section02">
+        <video
+          muted
+          playsinline
+          autoplay
+          loop
+          preload="auto"
+          class="section-bg"
+        >
           <source src="../assets/img/video01.mp4" type="video/mp4" />
         </video>
         <div class="section-02">
@@ -40,7 +68,7 @@
           </p>
         </div>
       </div>
-      <div class="section section03-container">
+      <div class="section section03-container" id="section03">
         <img
           v-scrollanimation
           lazyload
@@ -82,7 +110,7 @@
           </div>
         </div>
       </div>
-      <div class="section section05-container">
+      <div class="section section05-container" id="section04">
         <div class="section-bg_container">
           <img
             v-scrollanimation
@@ -114,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="section section06-container">
+      <div class="section section06-container" id="section05">
         <div class="section-06">
           <img lazyload class="imgtop" src="../assets/img/20.jpg" />
           <div class="title_container">
@@ -140,7 +168,7 @@
           </div>
         </div>
       </div>
-      <div class="section section07-container">
+      <div class="section section07-container" id="section06">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
@@ -175,7 +203,7 @@
           </div>
         </div>
       </div>
-      <div class="section section08-container">
+      <div class="section section08-container" id="section07">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
@@ -221,7 +249,7 @@
           </div>
         </div>
       </div>
-      <div class="section section10-container">
+      <div class="section section10-container" id="section08">
         <div class="sectionbg-container">
           <img
             v-scrollanimation
@@ -246,8 +274,15 @@
           </div>
         </div>
       </div>
-      <div class="section section11-container">
-        <video autoplay loop preload="auto" class="section-bg">
+      <div class="section section11-container" id="section09">
+        <video
+          muted
+          playsinline
+          autoplay
+          loop
+          preload="auto"
+          class="section-bg"
+        >
           <source src="../assets/img/video02.mp4" type="video/mp4" />
         </video>
         <div class="section-11">
@@ -270,7 +305,7 @@
           <img class="section-11__img02" src="../assets/img/14.jpg" />
         </div>
       </div>
-      <div class="section section12-container">
+      <div class="section section12-container" id="section010">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
@@ -294,7 +329,7 @@
           </div>
         </div>
       </div>
-      <div class="section section13-container">
+      <div class="section section13-container" id="section011">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
@@ -314,21 +349,28 @@
           </div>
           <p class="title">¡Mantengamos viva</p>
           <p class="subtitle">
-            la vida de<br />
+            la vida de
             barrio!
           </p>
           <div class="downgrade_container">
             <p v-scrollanimation class="downgrade">
-              Ubicado en un barrio<br />
-              tradicional de Ñuñoa, cercano<br />
+              Ubicado en un barrio
+              tradicional de Ñuñoa, cercano
               a todo lo que necesitas.
             </p>
           </div>
           <img lazyload class="fachada" src="../assets/img/17.jpg" />
         </div>
       </div>
-      <div class="section section14-container">
-        <video autoplay loop preload="auto" class="section-bg">
+      <div class="section section14-container" id="section012">
+        <video
+          muted
+          playsinline
+          autoplay
+          loop
+          preload="auto"
+          class="section-bg"
+        >
           <source src="../assets/img/video03.mp4" type="video/mp4" />
         </video>
         <div v-scrollanimation class="section-14">
@@ -347,8 +389,21 @@
           <img class="section-14__img03" src="../assets/img/19.jpg" />
         </div>
       </div>
-      <div class="section section15-container">
-        <div class="section-15">
+      <div class="section section15-container" id="section013">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          class="section-bg"
+        >
+          <source src="../assets/img/video04.mp4" type="video/mp4" />
+        </video>
+        <img lazyload src="../assets/img/logo-comuna.png" />
+      </div>
+      <div class="section section16-container" id="section014">
+        <div class="section-16">
           <img lazyload class="logo" src="../assets/img/bricsa.png" />
 
           <img lazyload class="bptl" src="../assets/img/bptl.png" />
@@ -359,35 +414,40 @@
 </template>
 
 <script>
-import Vue from "vue";
-import VueFullPage from "vue-fullpage.js";
-
-Vue.use(VueFullPage);
+import ProgressBar from "vue-simple-progress";
 export default {
+  components: {
+    ProgressBar,
+  },
   data() {
     return {
-      options: {
-        licenseKey: "YOUR_KEY_HEERE",
-        menu: "#menu",
-        anchors: [
-          "page1",
-          "page2",
-          "page3",
-          "page4",
-          "page5",
-          "page6",
-          "page7",
-          "page8",
-          "page9",
-          "page10",
-          "page11",
-          "page12",
-          "page13",
-          "page14",
-          "page15",
-        ],
-      },
+      currentStep: "1",
+      isLoading: true,
+      increasing_pct: 0,
+      isCover: true,
     };
+  },
+  methods: {
+    load() {
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 5000);
+    },
+    Prev() {
+      this.currentStep--;
+    },
+    Next() {
+      this.currentStep++;
+    },
+  },
+  created() {
+    this.load();
+    setInterval(() => {
+      if (this.is_paused) return;
+
+      this.increasing_pct = Math.min(this.increasing_pct + 1, 100);
+    }, 23);
   },
 };
 </script>
@@ -411,6 +471,115 @@ export default {
   height: 50px;
   background: #e40524;
   z-index: 99;
+}
+@keyframes breath {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes arrow-down {
+  0% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 3%;
+  }
+}
+.loading {
+  transition: all 1s both;
+  background: #e40524;
+  z-index: 100;
+  position: absolute;
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  row-gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  img {
+    animation: breath 1s both infinite alternate-reverse;
+    width: 40%;
+  }
+  .loadingBar {
+    width: 60%;
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+.instructions {
+  background: #e40524;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 80px min-content;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  row-gap: 30px;
+  z-index: 14;
+  p {
+    color: #fff;
+    font-size: 26px;
+    width: 90%;
+    text-align: center;
+    font-weight: 300;
+  }
+  img {
+    width: 10%;
+    animation: arrow-down 0.5s both infinite alternate-reverse;
+  }
+  .instructions_btn {
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    border: solid 2px #fff;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 400ms;
+    &:hover {
+      background: #b9041c;
+    }
+  }
+}
+
+.page-btn {
+  z-index: 16;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  display: grid;
+  a {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    background: #e40524;
+    cursor: pointer;
+    transition: 400ms;
+    &:hover {
+      background: #b9041c;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .section-bg {
@@ -437,7 +606,7 @@ export default {
     }
   }
   .section-01 {
-    background: rgba($color: #000000, $alpha: 0.3);
+    background: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -452,6 +621,7 @@ export default {
       left: 20px;
     }
     .call {
+      transition: all 400ms;
       text-align: left;
       width: 70%;
       color: #fff;
@@ -459,12 +629,12 @@ export default {
       font-weight: bolder;
       line-height: 0.8;
       position: absolute;
-      bottom: 30%;
+      bottom: 36%;
       left: 20px;
     }
     .downgrade {
       text-align: left;
-      width: 70%;
+      width: 69%;
       color: #fff;
       font-size: 30px;
       font-weight: 300;
@@ -478,12 +648,13 @@ export default {
       animation-duration: 3s;
       animation-fill-mode: both;
       transform: rotate(-90deg);
-      font-size: 230px;
+      font-size: 180px;
       position: absolute;
-      right: -250px;
+      right: -200px;
       margin: 0;
       font-weight: bolder;
       color: #fff;
+      top: 100%;
     }
     @keyframes uptext {
       0% {
@@ -536,7 +707,7 @@ export default {
       width: 100%;
       font-size: 70px;
       text-align: center;
-      bottom: 13%;
+      bottom: 30%;
       font-weight: 800;
       line-height: 0.9;
     }
@@ -545,6 +716,12 @@ export default {
       transition-duration: 2s;
       bottom: -100%;
       opacity: 0;
+      color: #fff;
+      width: 100%;
+      font-weight: 300;
+      font-size: 40px;
+      text-align: center;
+      line-height: 1;
     }
     .enter {
       position: absolute;
@@ -608,9 +785,9 @@ export default {
       position: absolute;
       color: #fff;
       width: 80%;
-      font-size: 70px;
+      font-size: 60px;
       text-align: center;
-      bottom: 30%;
+      bottom: 32%;
       left: 10%;
       font-weight: 800;
       line-height: 0.9;
@@ -621,8 +798,8 @@ export default {
         position: absolute;
         color: #fff;
         width: 80%;
-        font-size: 40px;
-        font-weight: 400;
+        font-size: 30px;
+        font-weight: 300;
         text-align: center;
         bottom: 20%;
         left: 10%;
@@ -640,7 +817,7 @@ export default {
         color: #fff;
         width: 80%;
         font-size: 30px;
-        font-weight: 400;
+        font-weight: 300;
         text-align: center;
         bottom: 20%;
         left: 100%;
@@ -920,9 +1097,9 @@ export default {
         position: absolute;
         color: #fff;
         width: 90%;
-        font-size: 60px;
+        font-size: 50px;
         text-align: center;
-        bottom: 15%;
+        bottom: 17%;
         left: 5%;
         font-weight: 800;
         line-height: 0.9;
@@ -951,7 +1128,7 @@ export default {
         position: absolute;
         color: #fff;
         width: 80%;
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 300;
         text-align: center;
         bottom: 5%;
@@ -983,7 +1160,7 @@ export default {
         position: absolute;
         color: #fff;
         width: 90%;
-        font-size: 60px;
+        font-size: 40px;
         text-align: center;
         top: 3%;
         left: 5%;
@@ -1006,7 +1183,7 @@ export default {
         font-size: 26px;
         font-weight: 300;
         text-align: center;
-        top: 24%;
+        top: 16%;
         left: 10%;
         line-height: 1;
         filter: blur(20px);
@@ -1261,7 +1438,7 @@ export default {
       position: absolute;
       width: 80%;
       left: 10%;
-      bottom: 60%;
+      bottom: 66%;
       font-size: 40px;
       font-weight: 300;
     }
@@ -1270,8 +1447,8 @@ export default {
       position: absolute;
       width: 80%;
       left: 10%;
-      bottom: 42%;
-      font-size: 60px;
+      bottom: 53%;
+      font-size: 50px;
       font-weight: 800;
       line-height: 0.9;
     }
@@ -1280,8 +1457,8 @@ export default {
         transition: all 1s ease-in-out 1s;
         z-index: 2;
         position: absolute;
-        bottom: 33%;
-        font-size: 24px;
+        bottom: 39%;
+        font-size: 22px;
         width: 80%;
         left: 10%;
         font-weight: 300;
@@ -1367,30 +1544,228 @@ export default {
       font-weight: 300;
     }
   }
-  .enter{
+  .enter {
     top: 0;
     opacity: 1;
   }
 }
+.section14-container {
+	.section-bg {
+		filter: brightness(1);
+	}
+	.section-14 {
+		color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 90%;
+		left: 0;
+		opacity: 0;
+		.section-14__img01 {
+			z-index: 2;
+			filter: brightness(0.7);
+			width: 60%;
+			height: 30%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			right: 10%;
+		}
+		.section-14__img02 {
+			filter: brightness(0.7);
+			position: absolute;
+			width: 70%;
+			height: 80%;
+			object-fit: cover;
+			left: 15%;
+			top: 10%;
+		}
+		.section-14__img03 {
+			z-index: 2;
+			width: 60%;
+			height: 30%;
+			object-fit: cover;
+			position: absolute;
+			bottom: 0;
+			left: 10%;
+		}
+		.title {
+			z-index: 2;
+			position: absolute;
+			width: 80%;
+			left: 20%;
+			text-align: left;
+			top: 28%;
+			font-size: 50px;
+			font-weight: 800;
+			line-height: 1;
+		}
+		.subtitle {
+			z-index: 2;
+			position: absolute;
+			width: 80%;
+			left: 20%;
+			top: 55%;
+			font-size: 20px;
+			text-align: left;
+			font-weight: 300;
+		}
+	}
+	.enter {
+		top: 0;
+		opacity: 1;
+	}
+}
 .section15-container {
-  background: #e40524;
-  display: flex;
-  .section-15 {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, min-content);
-    row-gap: 30px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    .logo {
-      width: 60%;
+	.section-bg {
+		height: 100vh;
+	}
+	img {
+		width: 40%;
+		position: absolute;
+		left: 30%;
+		bottom: 20%;
+	}
+}
+.section16-container {
+	background: #e40524;
+	display: flex;
+	.section-16 {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(2, min-content);
+		row-gap: 30px;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		align-content: center;
+		align-self: center;
+		.logo {
+			width: 60%;
+		}
+		.bptl {
+			width: 40%;
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+  .section01-container {
+    .section-01 {
+      .call {
+        font-size: 50px;
+        bottom: 40%;
+      }
+      #section1_vivelo {
+        font-size: 150px;
+        right: -160px;
+      }
     }
-    .bptl {
-      width: 40%;
+  }
+  .section02-container {
+    .section-02 {
+      .title {
+        font-size: 50px;
+      }
+    }
+  }
+  .section03-container {
+    .section-03 {
+      .title {
+        font-size: 40px;
+      }
+      .subtitle {
+        font-size: 25px;
+        bottom: 15%;
+      }
+      .subtitle02 {
+        font-size: 25px;
+        bottom: 15%;
+      }
+    }
+  }
+  .section08-container {
+    .section-08 {
+      .subtitle02 {
+        top: 18%;
+      }
+    }
+  }
+  .section13-container {
+    .section-13 {
+      .title {
+        font-size: 38px;
+      }
+      .subtitle{
+        font-size: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 321px) {
+  .section01-container {
+    .section-01 {
+      .call {
+        font-size: 40px;
+      }
+      #section1_vivelo {
+        font-size: 150px;
+        right: -160px;
+      }
+    }
+  }
+  .section02-container {
+    .section-02 {
+      .subtitle {
+        font-size: 30px;
+      }
+    }
+  }
+  .section05-container {
+    .section-05 {
+      .subtitle {
+        top: 21%;
+      }
+    }
+  }
+  .section06-container {
+    .section-06 {
+      .subtitle {
+        font-size: 26px;
+        top: 23%;
+      }
+    }
+  }
+  .section07-container {
+    .section-07 {
+      .subtitle {
+        font-size: 80px;
+      }
+    }
+  }
+  .section12-container {
+    .section-12 {
+      .subtitle {
+        font-size: 50px;
+      }
+    }
+  }
+  .section13-container {
+    .section-13 {
+      .title {
+        font-size: 32px;
+        bottom: 63%;
+      }
+      .subtitle {
+        font-size: 33px;
+        bottom: 55%;
+      }
+      .downgrade {
+        font-size: 20px !important;
+        width: 90% !important;
+        left: 5% !important;
+      }
     }
   }
 }

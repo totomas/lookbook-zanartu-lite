@@ -5,6 +5,9 @@
 </template>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
 #app {
   overflow: hidden;
   max-width: 426px;

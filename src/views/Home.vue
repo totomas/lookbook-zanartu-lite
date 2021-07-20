@@ -2,7 +2,7 @@
   <div>
     <div class="lookbook-container">
       <div class="loading" v-if="isLoading">
-        <img lazyload src="../assets/img/logo-comuna.png" />
+        <img  src="../assets/img/logo-comuna.png" />
         <progress-bar
           class="loadingBar"
           bar-color="#fff"
@@ -39,10 +39,10 @@
         />
       <span class="bricsa-square"></span>
       <div class="section section01-container" id="section01">
-        <img lazyload class="section-bg" src="../assets/img/01.jpg" />
+        <img  class="section-bg" src="../assets/img/01.jpg" />
         <div class="section-01">
           <img
-            lazyload
+            
             class="section-logo"
             src="../assets/img/logo-comuna.png"
           />
@@ -80,7 +80,7 @@
       <div class="section section03-container" id="section03">
         <img
           v-scrollanimation
-          lazyload
+          
           class="section-bg"
           src="../assets/img/03.jpg"
           alt=""
@@ -88,7 +88,7 @@
         <div class="disfruta_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="disfruta"
             src="../assets/img/disfruta.png"
           />
@@ -96,7 +96,7 @@
         <div class="section-bg02_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg02"
             src="../assets/img/04.jpg"
             alt=""
@@ -123,7 +123,7 @@
         <div class="section-bg_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/05.jpg"
           />
@@ -144,7 +144,7 @@
           <div class="imgcut_container">
             <img
               v-scrollanimation
-              lazyload
+              
               class="imgcut"
               src="../assets/img/06.jpg"
             />
@@ -153,7 +153,7 @@
       </div>
       <div class="section section06-container" id="section05">
         <div class="section-06">
-          <img lazyload class="imgtop" src="../assets/img/20.jpg" />
+          <img class="imgtop" src="../assets/img/20.jpg" />
           <div class="title_container">
             <p v-scrollanimation class="title">
               ¡Que rico <br />
@@ -170,7 +170,7 @@
           <div class="imgbottom_container">
             <img
               v-scrollanimation
-              lazyload
+              
               class="imgbottom"
               src="../assets/img/08.jpg"
             />
@@ -181,7 +181,7 @@
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/4.jpg"
           />
@@ -199,7 +199,7 @@
           <div class="imgcut_container">
             <img
               v-scrollanimation
-              lazyload
+              
               class="imgcut"
               src="../assets/img/10.jpg"
             />
@@ -216,7 +216,7 @@
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/11.jpg"
           />
@@ -224,7 +224,7 @@
         <div class="sectionbg02_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg02"
             src="../assets/img/12.jpg"
           />
@@ -262,7 +262,7 @@
         <div class="sectionbg-container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/13.jpg"
           />
@@ -306,20 +306,20 @@
           </div>
           <div class="section11-img_container">
             <img
-            lazyload
+            
               v-scrollanimation
               class="section-11__img01"
               src="../assets/img/08.jpg"
             />
           </div>
-          <img lazyload class="section-11__img02" src="../assets/img/14.jpg" />
+          <img  class="section-11__img02" src="../assets/img/14.jpg" />
         </div>
       </div>
       <div class="section section12-container" id="section010">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/15.jpg"
           />
@@ -343,7 +343,7 @@
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            lazyload
+            
             class="section-bg"
             src="../assets/img/16.jpg"
           />
@@ -352,7 +352,7 @@
           <div class="entorno_container">
             <img
               v-scrollanimation
-              lazyload
+              
               class="entorno"
               src="../assets/img/entorno.png"
             />
@@ -365,7 +365,7 @@
               necesitas.
             </p>
           </div>
-          <img lazyload class="fachada" src="../assets/img/17.jpg" />
+          <img  class="fachada" src="../assets/img/17.jpg" />
         </div>
       </div>
       <div class="section section14-container" id="section012">
@@ -380,7 +380,7 @@
           <source src="../assets/img/video03.mp4" type="video/mp4" />
         </video>
         <div v-scrollanimation class="section-14">
-          <img lazyload class="section-14__img01" src="../assets/img/11.jpg" />
+          <img  class="section-14__img01" src="../assets/img/11.jpg" />
           <p class="title">
             Vívelo<br />
             por dentro<br />
@@ -391,8 +391,8 @@
             a disfrutarlo<br />
             la tienes tú.
           </p>
-          <img lazyload class="section-14__img02" src="../assets/img/18.jpg" />
-          <img lazyload class="section-14__img03" src="../assets/img/19.jpg" />
+          <img  class="section-14__img02" src="../assets/img/18.jpg" />
+          <img  class="section-14__img03" src="../assets/img/19.jpg" />
         </div>
       </div>
       <div class="section section15-container" id="section013">
@@ -406,13 +406,13 @@
         >
           <source src="../assets/img/video04.mp4" type="video/mp4" />
         </video>
-        <img lazyload src="../assets/img/logo-comuna.png" />
+        <img  src="../assets/img/logo-comuna.png" />
       </div>
       <div class="section section16-container" id="section014">
         <div class="section-16">
-          <img lazyload class="logo" src="../assets/img/bricsa.png" />
+          <img  class="logo" src="../assets/img/bricsa.png" />
 
-          <img lazyload class="bptl" src="../assets/img/bptl.png" />
+          <img  class="bptl" src="../assets/img/bptl.png" />
         </div>
       </div>
     </div>

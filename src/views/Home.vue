@@ -31,6 +31,12 @@
           <img src="../assets/img/arrow-down.png" alt=""
         /></a>
       </div>
+      <progress-bar
+          class="bar-progress"
+          bar-color="#e40524"
+          bg-color="#fff"
+          :val="currentStep * 7.2"
+        />
       <span class="bricsa-square"></span>
       <div class="section section01-container" id="section01">
         <img lazyload class="section-bg" src="../assets/img/01.jpg" />
@@ -300,12 +306,13 @@
           </div>
           <div class="section11-img_container">
             <img
+            lazyload
               v-scrollanimation
               class="section-11__img01"
               src="../assets/img/08.jpg"
             />
           </div>
-          <img class="section-11__img02" src="../assets/img/14.jpg" />
+          <img lazyload class="section-11__img02" src="../assets/img/14.jpg" />
         </div>
       </div>
       <div class="section section12-container" id="section010">
@@ -373,7 +380,7 @@
           <source src="../assets/img/video03.mp4" type="video/mp4" />
         </video>
         <div v-scrollanimation class="section-14">
-          <img class="section-14__img01" src="../assets/img/11.jpg" />
+          <img lazyload class="section-14__img01" src="../assets/img/11.jpg" />
           <p class="title">
             Vívelo<br />
             por dentro<br />
@@ -384,8 +391,8 @@
             a disfrutarlo<br />
             la tienes tú.
           </p>
-          <img class="section-14__img02" src="../assets/img/18.jpg" />
-          <img class="section-14__img03" src="../assets/img/19.jpg" />
+          <img lazyload class="section-14__img02" src="../assets/img/18.jpg" />
+          <img lazyload class="section-14__img03" src="../assets/img/19.jpg" />
         </div>
       </div>
       <div class="section section15-container" id="section013">
@@ -565,8 +572,8 @@ export default {
 .page-btn {
   z-index: 13;
   position: fixed;
-  bottom: 20px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
   display: grid;
   a {
     width: 30px;
@@ -586,6 +593,14 @@ export default {
   .disabled{
     pointer-events: none;
   }
+}
+
+.bar-progress{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 13;
 }
 
 .section-bg {

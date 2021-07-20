@@ -14,17 +14,20 @@
         />
       </div>
       <div class="instructions" v-show="isCover">
-        <p>Disfruta una navegación única, deslizando hacia abajo</p>
-        <img src="../assets/img/scroll.png" />
+        <p>Para una mejor experiencia, navega con los botones</p>
+        <div class="instructions_page-btn">
+          <img src="../assets/img/up-arrow.png" alt="" />
+          <img src="../assets/img/arrow-down.png" alt="" />
+        </div>
         <button class="instructions_btn" @click="isCover = !isCover">
           Empezar a navegar
         </button>
       </div>
       <div class="page-btn">
-        <a :href="'#section0' + currentStep" @click="Prev">
+        <a :href="'#section0' + currentStep" @click="Prev" :class="[currentStep == '1' ? 'disabled' : '' ]">
           <img src="../assets/img/up-arrow.png" alt=""
         /></a>
-        <a :href="'#section0' + currentStep" @click="Next">
+        <a :href="'#section0' + currentStep" @click="Next" :class="[currentStep == '14' ? 'disabled' : '' ]">
           <img src="../assets/img/arrow-down.png" alt=""
         /></a>
       </div>
@@ -501,7 +504,6 @@ export default {
   }
 }
 
-
 .instructions {
   background: #e40524;
   position: relative;
@@ -510,7 +512,6 @@ export default {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: min-content 80px min-content;
   justify-content: center;
   justify-items: center;
   align-content: center;
@@ -523,10 +524,21 @@ export default {
     width: 90%;
     text-align: center;
     font-weight: 300;
+    margin: 0;
   }
-  img {
-    width: 10%;
-    animation: arrow-down 0.5s both infinite alternate-reverse;
+  .instructions_page-btn {
+    width: 50px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    border: solid 1px #fff;
+    img {
+      width: 70%;
+      padding: 5px;
+      border: none;
+      background: #e40524;
+    }
   }
   .instructions_btn {
     color: #fff;
@@ -570,6 +582,9 @@ export default {
     img {
       width: 100%;
     }
+  }
+  .disabled{
+    pointer-events: none;
   }
 }
 
@@ -1020,9 +1035,9 @@ export default {
         transition: all 2s ease-in-out;
         position: absolute;
         color: #fff;
-        width: 80%;
-        font-size: 26px;
-        left: 10%;
+        width: 70%;
+        font-size: 23px;
+        left: 15%;
         font-weight: 300;
         bottom: 0;
         opacity: 0;

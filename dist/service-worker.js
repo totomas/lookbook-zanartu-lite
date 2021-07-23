@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.93b4cdec54ee32766c8e1e5c71c9e019.js"
+  "/zanartulite/precache-manifest.615c2933c44370d1352618ca6e8ded83.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "lookbook-zanartu"});

@@ -2,7 +2,7 @@
   <div>
     <div class="lookbook-container">
       <div class="loading" v-if="isLoading">
-        <img  src="../assets/img/logo-comuna.png" />
+        <img src="../assets/img/logo-comuna.png" />
         <progress-bar
           class="loadingBar"
           bar-color="#fff"
@@ -23,29 +23,40 @@
           Empezar a navegar
         </button>
       </div>
+      <div class="verlite" v-show="verLite">
+        <span @click="verLite = !verLite">X</span>
+        <p>Para una experiencia única ve la versión Full</p>
+        <a href="https://bricsa.cl/wp-content/lookbook/zanartu.html"
+          >Ver Full</a
+        >
+      </div>
       <div class="page-btn">
-        <a :href="'#section0' + currentStep" @click="Prev" :class="[currentStep == '1' ? 'disabled' : '' ]">
+        <a
+          :href="'#section0' + currentStep"
+          @click="Prev"
+          :class="[currentStep == '1' ? 'disabled' : '']"
+        >
           <img src="../assets/img/up-arrow.png" alt=""
         /></a>
-        <a :href="'#section0' + currentStep" @click="Next" :class="[currentStep == '14' ? 'disabled' : '' ]">
+        <a
+          :href="'#section0' + currentStep"
+          @click="Next"
+          :class="[currentStep == '14' ? 'disabled' : '']"
+        >
           <img src="../assets/img/arrow-down.png" alt=""
         /></a>
       </div>
       <progress-bar
-          class="bar-progress"
-          bar-color="#e40524"
-          bg-color="#fff"
-          :val="currentStep * 7.2"
-        />
+        class="bar-progress"
+        bar-color="#e40524"
+        bg-color="#fff"
+        :val="currentStep * 7.2"
+      />
       <span class="bricsa-square"></span>
       <div class="section section01-container" id="section01">
-        <img  class="section-bg" src="../assets/img/01.jpg" />
+        <img class="section-bg" src="../assets/img/01.jpg" />
         <div class="section-01">
-          <img
-            
-            class="section-logo"
-            src="../assets/img/logo-comuna.png"
-          />
+          <img class="section-logo" src="../assets/img/logo-comuna.png" />
           <p class="call">
             Vívelo por <br />
             dentro y<br />
@@ -80,7 +91,6 @@
       <div class="section section03-container" id="section03">
         <img
           v-scrollanimation
-          
           class="section-bg"
           src="../assets/img/03.jpg"
           alt=""
@@ -88,7 +98,6 @@
         <div class="disfruta_container">
           <img
             v-scrollanimation
-            
             class="disfruta"
             src="../assets/img/disfruta.png"
           />
@@ -96,7 +105,6 @@
         <div class="section-bg02_container">
           <img
             v-scrollanimation
-            
             class="section-bg02"
             src="../assets/img/04.jpg"
             alt=""
@@ -123,7 +131,6 @@
         <div class="section-bg_container">
           <img
             v-scrollanimation
-            
             class="section-bg"
             src="../assets/img/05.jpg"
           />
@@ -142,12 +149,7 @@
             </p>
           </div>
           <div class="imgcut_container">
-            <img
-              v-scrollanimation
-              
-              class="imgcut"
-              src="../assets/img/06.jpg"
-            />
+            <img v-scrollanimation class="imgcut" src="../assets/img/06.jpg" />
           </div>
         </div>
       </div>
@@ -170,7 +172,6 @@
           <div class="imgbottom_container">
             <img
               v-scrollanimation
-              
               class="imgbottom"
               src="../assets/img/08.jpg"
             />
@@ -179,12 +180,7 @@
       </div>
       <div class="section section07-container" id="section06">
         <div class="sectionbg_container">
-          <img
-            v-scrollanimation
-            
-            class="section-bg"
-            src="../assets/img/4.jpg"
-          />
+          <img v-scrollanimation class="section-bg" src="../assets/img/4.jpg" />
         </div>
         <div class="section-07">
           <div class="title_container">
@@ -197,12 +193,7 @@
             </p>
           </div>
           <div class="imgcut_container">
-            <img
-              v-scrollanimation
-              
-              class="imgcut"
-              src="../assets/img/10.jpg"
-            />
+            <img v-scrollanimation class="imgcut" src="../assets/img/10.jpg" />
           </div>
           <div class="downgrade_container">
             <p v-scrollanimation class="downgrade">
@@ -216,7 +207,6 @@
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            
             class="section-bg"
             src="../assets/img/11.jpg"
           />
@@ -224,7 +214,6 @@
         <div class="sectionbg02_container">
           <img
             v-scrollanimation
-            
             class="section-bg02"
             src="../assets/img/12.jpg"
           />
@@ -262,7 +251,6 @@
         <div class="sectionbg-container">
           <img
             v-scrollanimation
-            
             class="section-bg"
             src="../assets/img/13.jpg"
           />
@@ -306,20 +294,18 @@
           </div>
           <div class="section11-img_container">
             <img
-            
               v-scrollanimation
               class="section-11__img01"
               src="../assets/img/08.jpg"
             />
           </div>
-          <img  class="section-11__img02" src="../assets/img/14.jpg" />
+          <img class="section-11__img02" src="../assets/img/14.jpg" />
         </div>
       </div>
       <div class="section section12-container" id="section010">
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            
             class="section-bg"
             src="../assets/img/15.jpg"
           />
@@ -343,7 +329,6 @@
         <div class="sectionbg_container">
           <img
             v-scrollanimation
-            
             class="section-bg"
             src="../assets/img/16.jpg"
           />
@@ -352,7 +337,6 @@
           <div class="entorno_container">
             <img
               v-scrollanimation
-              
               class="entorno"
               src="../assets/img/entorno.png"
             />
@@ -365,7 +349,7 @@
               necesitas.
             </p>
           </div>
-          <img  class="fachada" src="../assets/img/17.jpg" />
+          <img class="fachada" src="../assets/img/17.jpg" />
         </div>
       </div>
       <div class="section section14-container" id="section012">
@@ -380,7 +364,7 @@
           <source src="../assets/img/video03.mp4" type="video/mp4" />
         </video>
         <div v-scrollanimation class="section-14">
-          <img  class="section-14__img01" src="../assets/img/11.jpg" />
+          <img class="section-14__img01" src="../assets/img/11.jpg" />
           <p class="title">
             Vívelo<br />
             por dentro<br />
@@ -391,8 +375,8 @@
             a disfrutarlo<br />
             la tienes tú.
           </p>
-          <img  class="section-14__img02" src="../assets/img/18.jpg" />
-          <img  class="section-14__img03" src="../assets/img/19.jpg" />
+          <img class="section-14__img02" src="../assets/img/18.jpg" />
+          <img class="section-14__img03" src="../assets/img/19.jpg" />
         </div>
       </div>
       <div class="section section15-container" id="section013">
@@ -406,13 +390,13 @@
         >
           <source src="../assets/img/video04.mp4" type="video/mp4" />
         </video>
-        <img  src="../assets/img/logo-comuna.png" />
+        <img src="../assets/img/logo-comuna.png" />
       </div>
       <div class="section section16-container" id="section014">
         <div class="section-16">
-          <img  class="logo" src="../assets/img/bricsa.png" />
+          <img class="logo" src="../assets/img/bricsa.png" />
 
-          <img  class="bptl" src="../assets/img/bptl.png" />
+          <img class="bptl" src="../assets/img/bptl.png" />
         </div>
       </div>
     </div>
@@ -431,6 +415,7 @@ export default {
       isLoading: true,
       increasing_pct: 0,
       isCover: true,
+      verLite: true,
     };
   },
   methods: {
@@ -569,6 +554,49 @@ export default {
   }
 }
 
+.verlite {
+  background: #e40524;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: grid;
+  grid-template-rows: min-content;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  row-gap: 10px;
+  z-index: 14;
+
+  span {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  p{
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+    background: rgba(0, 0, 0, 0);
+    border: solid 2px #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 400ms;
+    text-decoration: none;
+
+    &:hover {
+      background: #b9041c;
+    }
+  }
+}
+
 .page-btn {
   z-index: 13;
   position: fixed;
@@ -590,12 +618,12 @@ export default {
       width: 100%;
     }
   }
-  .disabled{
+  .disabled {
     pointer-events: none;
   }
 }
 
-.bar-progress{
+.bar-progress {
   width: 100%;
   position: fixed;
   top: 0;
